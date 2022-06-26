@@ -75,11 +75,11 @@ export default {
 	methods: {
 		async _loadHistoryList () {
 			this.loading = true
-			let {data} = await this.$axios.get('/historyList')
+			let {data, success} = await this.$axios.get('/historyList')
 			this.loading = false
 
-			if (data.success) {
-				this.tableData = data.data
+			if (success) {
+				this.tableData = data
 			}
 		},
 

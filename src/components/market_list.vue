@@ -101,11 +101,11 @@ export default {
 
 		async _loadMarketList (hideMask = false) {
 			hideMask && (this.loading = true)
-			let {data} = await this.$axios.get('/marketList')
+			let {data, success} = await this.$axios.get('/marketList')
 			this.loading = false
 
-			if (data.success) {
-				this.tableData = data.data
+			if (success) {
+				this.tableData = data
 			}
 		},
 

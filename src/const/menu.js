@@ -1,4 +1,4 @@
-import {constValToOptions} from '../common/util.js'
+import {constValToOptions} from '../common/util/index.js'
 
 let menuVal = {
     marketList: 'market_list',

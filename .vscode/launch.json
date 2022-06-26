@@ -1,0 +1,54 @@
+{
+    // 使用 IntelliSense 了解相关属性。
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "name": "nodemon",
+            "runtimeExecutable": "/Users/gilbert/.nvm/versions/node/v17.1.0/bin/node",
+            "program": "${workspaceFolder}/hot_reload_mock/index.js",
+            "request": "launch",
+            "restart": true,
+            // "runtimeExecutable": "nodemon",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+        // {
+        //     "type": "node",
+        //     "request": "launch",
+        //     "name": "Launch node",
+        //     "runtimeExecutable": "/Users/gilbert/.nvm/versions/node/v17.1.0/bin/yarn",
+        //     "runtimeArgs": [
+        //         // 指定命令，vercel dev --debug -> ["dev"]
+        //         "dev"
+        //     ],
+        //     "cwd": "${workspaceFolder}", // 指定脚本执行目录
+        //     // "args": ["--debug"]，// 传入命令参数，vercel dev --debug -> ["--debug"]
+        //     // "port": 8088,
+        //     "skipFiles": ["<node_internals>/**"]
+        //     // "port": 9339, // 启动程序的端口
+        //     // "console": "externalTerminal" // 指定启动控制器为外部终端
+        // }
+        {
+            "type": "node",
+            "request": "launch",
+            "name":"launch webpack-dev-server",
+            "runtimeExecutable": "/Users/gilbert/.nvm/versions/node/v17.1.0/bin/node",
+            "program": "${workspaceFolder}/node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+            "args": ["--progress", "--inline", "--config", "build/webpack.dev.conf.js"]
+          },
+          {
+            "type": "node",
+            "request": "launch",
+            "name":"launch webpack",
+            "runtimeExecutable": "/Users/gilbert/.nvm/versions/node/v17.1.0/bin/node",
+            "program": "${workspaceFolder}/node_modules/webpack/bin/webpack.js",
+            "args": ["--progress", "--config", "build/webpack.prod.conf.js"]
+          }
+    ]
+}

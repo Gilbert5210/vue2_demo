@@ -4,9 +4,9 @@ import App from './App'
 import router from './router'
 import elementUI from './common/element_ui'
 import './style/index.less'
-import axios from 'axios'
+import myAxios from './common/util/axios'
 
-Vue.prototype.$axios = axios
+Vue.prototype.$axios = myAxios()
 Vue.use(elementUI)
 Vue.config.productionTip = false
 
